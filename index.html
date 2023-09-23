@@ -40,6 +40,7 @@
             document.querySelector('#run-inference').onclick = () => {
                 try {
                     let features = document.querySelector('#features').value.split(',').map(x => Number(x.trim()));
+                    console.log(features);
                     let res = classifier.classify(features);
                     document.querySelector('#results').textContent = JSON.stringify(res, null, 4);
                 }
